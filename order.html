@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Order</title>
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            margin: 8px;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5%;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            float: right;
+            background-color: rgba(46, 46, 255, 0.74);
+            color: white;
+        }
+
+        .topnav a:hover {
+            background: blue;
+            color: white;
+        }
+
+        .bottombar {
+            overflow: hidden;
+            padding: 5px;
+            background-color: black;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .bottombar a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5%;
+        }
+
+        .bottombar a:hover {
+            background: blue;
+            color: white;
+        }
+
+
+        .buttonA {
+            background-color: rgb(49, 32, 230);
+            border: none;
+            color: white;
+            padding: 20px 19px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 5%;
+        }
+
+        .buttonM {
+            background-color: rgb(49, 32, 230);
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 5%;
+        }
+
+        .buttonD {
+            background-color: rgb(49, 32, 230);
+            border: none;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 5%;
+        }
+
+        .column {
+            padding: 15px 25px;
+            padding-top: 135px;
+            padding-bottom: 70px;
+        }
+
+        #grad1 {
+
+            background-color: rgb(17, 0, 255);
+            background-image: linear-gradient(rgb(43, 168, 252), rgb(149, 228, 248));
+        }
+
+        h1 {
+            text-align: center;
+            padding: 25px;
+        }
+
+        #card1 {
+            
+            padding: 50px 20px;
+            border-color: black;
+            border-width: 3px;
+        }
+
+        #card2 {
+            margin-top: 40px;
+            padding: 50px 20px;
+            border-color: black;
+            border-width: 3px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="#home"><i class="fas fa-home" style="font-size:24px;"></i></a>
+        <a href="#print">Print</a>
+        <a class="active" href="#dine">DINE IN</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5 bg-warning" id="grad1">
+                <div class="row">
+                    <div class="col-12 ">
+                        <h1>Table No.?</h1>
+                    </div>
+                </div>
+                <div class="card bg-light text-dark" id="card1">
+                    <div class="card-body">
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 ">
+                <div class="column">
+                    <div class="col-sm-8" style="text-align: center; max-width:30%;">
+                        <button class="buttonA" id="Appetizer">Appetizer</button>
+                    </div><br><br>
+                    <div class="col-sm-8" style="text-align: center; max-width:30%;">
+                        <button class="buttonM" id="Main">Main</button>
+                    </div><br><br>
+                    <div class="col-sm-8" style="text-align: center; max-width:30%;">
+                        <button class="buttonD" id="Dissert">Dissert</button>
+                    </div><br>
+                </div>
+            </div>
+            <div class="col-5" id="grad1">
+                <div class="card bg-light text-dark" id="card2">
+                    <div class="card-body">
+                        <div id="Appetizer">
+                            <button type="button" class="btn">French Friend</button><br><br>
+                            <button type="button" class="btn">Crab Stick salad Rolls (Crab stick)</button><br><br>
+                            <button type="button" class="btn">Shrimp and Cheese sping Rolls (Shrimp Cheese)</button><br><br>
+                            <button type="button" class="btn">Larb Salmon</button><br><br>
+                            <button type="button" class="btn">Bread with Cheese</button>
+                        </div>
+
+                        <!-- <div id="Main">
+                            <button type="button" class="btn">Rib eye steak</button><br><br>
+                            <button type="button" class="btn">Pork chop</button><br><br>
+                            <button type="button" class="btn">Salmon Steak</button><br><br>
+                            <button type="button" class="btn">Grilled seabass white wine sauce (Grilled Sea Bass)</button><br><br>
+                            <button type="button" class="btn">Peper Steak</button>
+                        </div>
+
+                        <div id="Dissert">
+                            <button type="button" class="btn">Bluberry cheese cake</button><br><br>
+                            <button type="button" class="btn">Bacon Egg Tart</button><br><br>
+                            <button type="button" class="btn">Double Chocolate</button><br><br>
+                            <button type="button" class="btn">Black Forest Cake</button><br><br>
+                            <button type="button" class="btn">Strawberry Lime Cheese</button>
+                        </div>
+                         -->
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="bottombar">
+        <a href="#home">Delete</a>
+        <a href="#news">Modify</a>
+
+    </div>
+
+</body>
+
+</html>
